@@ -1,0 +1,154 @@
+/* CSS simple - Tema oscuro para la página de éxito */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+}
+
+.success-box {
+    background-color: #2d2d2d;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #444;
+    text-align: center;
+}
+
+h1 {
+    color: #4caf50;
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+}
+
+.success-box > p {
+    color: #ccc;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Información del usuario */
+.user-info {
+    background-color: #3d3d3d;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 25px 0;
+    text-align: left;
+    border: 1px solid #555;
+}
+
+.user-info h3 {
+    color: #4fc3f7;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.info-item {
+    margin: 15px 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #555;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item strong {
+    color: #4fc3f7;
+}
+
+.status-active {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+/* Botones de acción */
+.actions {
+    margin: 30px 0 20px 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+    min-width: 140px;
+}
+
+.btn-logout {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-logout:hover {
+    background-color: #d32f2f;
+}
+
+.btn-secondary {
+    background-color: #4fc3f7;
+    color: #000;
+}
+
+.btn-secondary:hover {
+    background-color: #29b6f6;
+}
+
+/* Nota al final */
+.note {
+    color: #999;
+    font-size: 13px;
+    margin-top: 25px;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .success-box {
+        padding: 25px;
+    }
+    
+    .actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 200px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .info-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Bienvenido! - Sistema Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='exito.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="success-box">
+            <h1>¡Bienvenido {{ session.nombre }}!</h1>
+            <p>Has iniciado sesión correctamente en el sistema</p>
+            
+            <div class="actions">
+                <a href="{{ url_for('logout') }}" class="btn btn-logout">Cerrar Sesión</a>
+                <a href="{{ url_for('index') }}" class="btn btn-secondary">Volver al Inicio</a>
+            </div>
+            
+            <div class="note">
+                <small>Esta página solo es visible para usuarios autenticados</small>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Simple animacion de entrada
+        window.onload = function() {
+            document.querySelector('.success-box').style.opacity = '0';
+            document.querySelector('.success-box').style.transform = 'translateY(20px)';
+            
+            setTimeout(function() {
+                var box = document.querySelector('.success-box');
+                box.style.transition = 'all 0.5s ease';
+                box.style.opacity = '1';
+                box.style.transform = 'translateY(0)';
+            }, 100);
+        };
+    </script>
+</body>
+</html>
